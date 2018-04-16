@@ -1,0 +1,38 @@
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe.config
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\bin\Debug\HtmlParser.pdb
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\bin\Debug\AngleSharp.dll
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\bin\Debug\AngleSharp.xml
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csprojResolveAssemblyReference.cache
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Form1.resources
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Properties.Resources.resources
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.GenerateResource.Cache
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.CoreCompileInputs.cache
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.exe
+c:\users\c# killah\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.pdb
+D:\GITHUB\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe.config
+D:\GITHUB\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe
+D:\GITHUB\HtmlParser\HtmlParser\bin\Debug\HtmlParser.pdb
+D:\GITHUB\HtmlParser\HtmlParser\bin\Debug\AngleSharp.dll
+D:\GITHUB\HtmlParser\HtmlParser\bin\Debug\AngleSharp.xml
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csprojResolveAssemblyReference.cache
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Form1.resources
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Properties.Resources.resources
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.GenerateResource.Cache
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.CoreCompileInputs.cache
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.exe
+D:\GITHUB\HtmlParser\HtmlParser\obj\Debug\HtmlParser.pdb
+D:\GITHUB\HtmlParser\HtmlParser\bin\Debug\MaterialSkin.dll
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe.config
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\bin\Debug\HtmlParser.pdb
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\bin\Debug\AngleSharp.dll
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\bin\Debug\MaterialSkin.dll
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\bin\Debug\AngleSharp.xml
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csprojResolveAssemblyReference.cache
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Form1.resources
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Properties.Resources.resources
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.GenerateResource.Cache
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.CoreCompileInputs.cache
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.exe
+C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.pdb
