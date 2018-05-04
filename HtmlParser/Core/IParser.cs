@@ -1,10 +1,16 @@
 ﻿
 namespace HtmlParser.Core
 {
-   using AngleSharp.Dom.Html;
+   //using AngleSharp.Dom.Html;
+   using HtmlAgilityPack;
 
-   public interface IParser<T> where T : class
+   public interface IStoreParser<T> where T : class
    {
-      T Parse(IHtmlDocument document,IParserSettings settings);
+      T ParseStoreElements(HtmlDocument document,IParserSettings settings);
+      T ParseProductTitle();
+      T ParseProductCategory();
+      T ParseProductPrice();
+
+
    }
 }

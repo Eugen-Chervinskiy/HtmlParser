@@ -36,3 +36,19 @@ C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.cs
 C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.CoreCompileInputs.cache
 C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.exe
 C:\Users\Rolling Solo\source\repos\HtmlParser\HtmlParser\obj\Debug\HtmlParser.pdb
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe.config
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\HtmlParser.exe
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\HtmlParser.pdb
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\AngleSharp.dll
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\MaterialSkin.dll
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\AngleSharp.xml
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csprojResolveAssemblyReference.cache
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Form1.resources
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.Properties.Resources.resources
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.GenerateResource.Cache
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.csproj.CoreCompileInputs.cache
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.exe
+D:\SSA Group cv\HtmlParser\HtmlParser\obj\Debug\HtmlParser.pdb
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\HtmlAgilityPack.dll
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\HtmlAgilityPack.pdb
+D:\SSA Group cv\HtmlParser\HtmlParser\bin\Debug\HtmlAgilityPack.xml

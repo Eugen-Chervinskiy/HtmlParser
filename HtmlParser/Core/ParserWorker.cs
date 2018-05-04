@@ -1,11 +1,12 @@
 ﻿
 namespace HtmlParser.Core
 {
+   using HtmlAgilityPack;
    using System;
 
    public class ParserWorker<T> where T : class
    {
-      private IParser<T> parser;
+      private IStoreParser<T> parser;
 
       private IParserSettings parserSettings;
 
@@ -16,7 +17,7 @@ namespace HtmlParser.Core
 
       public event Action<object, T> OneNewData;
       public event Action<object> OneCompleted;
-      public IParser<T> Parser
+      public IStoreParser<T> Parser
       {
          get
          {
@@ -52,13 +53,13 @@ namespace HtmlParser.Core
       }
 
 
-      public ParserWorker(IParser<T> parser)
+      public ParserWorker(IStoreParser<T> parser)
       {
          this.parser = parser;
 
       }
 
-      public ParserWorker(IParser<T> parser, IParserSettings parserSettings) : this(parser)
+      public ParserWorker(IStoreParser<T> parser, IParserSettings parserSettings) : this(parser)
       {
          this.parserSettings = parserSettings;
       }
@@ -83,17 +84,17 @@ namespace HtmlParser.Core
             return;
          }
 
-         var source = await loader.GetSourceByPageId();
+         //var source = await loader.GetSourceByPageId();
 
-         var domParser = new AngleSharp.Parser.Html.HtmlParser();
+         //var domParser = new AngleSharp.Parser.Html.HtmlParser();
 
-         var document = await domParser.ParseAsync(source);
+         var domParser = new HtmlWeb();
 
-         var result = parser.Parse(document,settings);
+         var document = domParser.Load(settings.BaseUrl);
+
+         var result = parser.ParseStoreElements(document,settings);
 
          OneNewData?.Invoke(this, result);
-
-
          OneCompleted?.Invoke(this);
          isActive = false;
       }
