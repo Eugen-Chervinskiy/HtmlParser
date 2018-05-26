@@ -84,15 +84,11 @@ namespace HtmlParser.Core
             return;
          }
 
-         //var source = await loader.GetSourceByPageId();
-
-         //var domParser = new AngleSharp.Parser.Html.HtmlParser();
-
          var domParser = new HtmlWeb();
 
          var document = domParser.Load(settings.BaseUrl);
 
-         var result = parser.ParseStoreElements(document,settings);
+         var result = Parser.ParseStoreElements(document,settings);
 
          OneNewData?.Invoke(this, result);
          OneCompleted?.Invoke(this);

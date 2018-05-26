@@ -17,15 +17,15 @@ namespace HtmlParser
       public Form1()
       {
          InitializeComponent();
-         var materialSkinManager = MaterialSkinManager.Instance;
-         materialSkinManager.AddFormToManage(this);
-         materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-         materialSkinManager.ColorScheme =
-                           new ColorScheme(Primary.Cyan400,
-                                           Primary.BlueGrey900,
-                                           Primary.BlueGrey500,
-                                           Accent.LightBlue200,
-                                           TextShade.WHITE);
+         //var materialSkinManager = MaterialSkinManager.Instance;
+         //materialSkinManager.AddFormToManage(this);
+         //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+         //materialSkinManager.ColorScheme =
+         //                  new ColorScheme(Primary.Cyan400,
+         //                                  Primary.BlueGrey900,
+         //                                  Primary.BlueGrey500,
+         //                                  Accent.LightBlue200,
+         //                                  TextShade.WHITE);
 
          parser = new ParserWorker<string[]>(new WebParser());
 
@@ -36,7 +36,7 @@ namespace HtmlParser
 
       private void Parser_OneNewData(object arg1, string[] arg2)
       {
-         var query = arg2.Distinct().ToArray();
+         var query = arg2.ToArray();
          ListTitles.Items.AddRange(query);
       }
 
@@ -75,6 +75,11 @@ namespace HtmlParser
          writer.Close();
 
          MessageBox.Show("Saving Completed");
+
+      }
+
+      private void tabPage1_Click(object sender, EventArgs e)
+      {
 
       }
    }

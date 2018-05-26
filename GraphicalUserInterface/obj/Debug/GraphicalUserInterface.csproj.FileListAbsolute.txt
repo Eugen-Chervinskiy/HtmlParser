@@ -1,0 +1,17 @@
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\GraphicalUserInterface.exe.config
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\GraphicalUserInterface.exe
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\GraphicalUserInterface.pdb
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\HtmlParser.exe
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\MaterialSkin.dll
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\HtmlAgilityPack.dll
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\HtmlParser.pdb
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\HtmlParser.exe.config
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\HtmlAgilityPack.pdb
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\HtmlAgilityPack.xml
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.csprojResolveAssemblyReference.cache
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.Form1.resources
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.Properties.Resources.resources
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.csproj.GenerateResource.Cache
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.csproj.CoreCompileInputs.cache
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.exe
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.pdb

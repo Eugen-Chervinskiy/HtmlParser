@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlParser", "HtmlParser\HtmlParser.csproj", "{DDD802CB-3EB4-4425-A325-1075483F4673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicalUserInterface", "GraphicalUserInterface\GraphicalUserInterface.csproj", "{5704B009-A57C-4A74-A69F-A9585CA3D1B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{06372964-E52D-40D6-8ACF-41CDB5E090CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DDD802CB-3EB4-4425-A325-1075483F4673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD802CB-3EB4-4425-A325-1075483F4673}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD802CB-3EB4-4425-A325-1075483F4673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5704B009-A57C-4A74-A69F-A9585CA3D1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5704B009-A57C-4A74-A69F-A9585CA3D1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5704B009-A57C-4A74-A69F-A9585CA3D1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5704B009-A57C-4A74-A69F-A9585CA3D1B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06372964-E52D-40D6-8ACF-41CDB5E090CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06372964-E52D-40D6-8ACF-41CDB5E090CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06372964-E52D-40D6-8ACF-41CDB5E090CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06372964-E52D-40D6-8ACF-41CDB5E090CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

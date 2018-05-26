@@ -7,9 +7,9 @@ namespace HtmlParser.Core
    public interface IStoreParser<T> where T : class
    {
       T ParseStoreElements(HtmlDocument document,IParserSettings settings);
-      T ParseProductTitle();
-      T ParseProductCategory();
-      T ParseProductPrice();
+      string ParseProductTitle();
+      string ParseProductCategory();
+      string ParseProductPrice();
 
 
    }
