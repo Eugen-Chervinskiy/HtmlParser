@@ -1,15 +1,15 @@
 ﻿
 namespace HtmlParser.Core.ParserSettings
 {
-   public class ParserSettings : IParserSettings
+   public class ParserSettings : ICrawlerSettings
    {
       public ParserSettings(string text,string tag)
       {
-         BaseUrl = text;
+         CategoriesPageUrl = text;
          Tag = tag;
       }
 
-      public string BaseUrl { get; set; }
+      public string CategoriesPageUrl { get; set; }
       public string Prefix { get; set; } = "page{CurrentId}";
       public int StartPoint { get; set; }
       public int EndPoint { get; set; }

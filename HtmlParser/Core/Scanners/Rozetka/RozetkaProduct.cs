@@ -15,14 +15,14 @@ namespace HtmlParser.Core.ParserSettings
       public string Category { get; set; }
       public string Name { get; set;}
       public string Price { get; set; }
-      public string Image { get; set; }
+      public string ImageLink { get; set; }
 
       public override string ToString()
       {
          return string.Format(
                               $"Category: {this.Category} \n\r" +
                               $"Name: {this.Name} \n\r" +
-                              $"Image: {this.Image} \n\r" +
+                              $"Image: {this.ImageLink} \n\r" +
                               $"Price: {this.Price} \n\r");
       }
 

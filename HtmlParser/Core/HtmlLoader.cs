@@ -7,12 +7,12 @@ namespace HtmlParser.Core
 
    public class HtmlLoader
    {
-      readonly HttpClient client;
-      readonly string url;
-      public HtmlLoader(IParserSettings settings)
+      private readonly HttpClient client;
+      private readonly string url;
+      public HtmlLoader(ICrawlerSettings settings)
       {
          client = new HttpClient();
-         url = $"{settings.BaseUrl}";
+         url = $"{settings.CategoriesPageUrl}";
       }
 
 

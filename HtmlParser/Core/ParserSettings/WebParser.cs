@@ -8,7 +8,7 @@ namespace HtmlParser.Core.ParserSettings
    using HtmlAgilityPack;
    using System.Net.Http;
 
-   public class WebParser : IStoreParser<string[]>
+   public class WebParser : ICrawler<string[]>
    {
       private HtmlDocument _document;
       //public WebParser(HtmlDocument document)
@@ -38,7 +38,7 @@ namespace HtmlParser.Core.ParserSettings
       }
 
 
-      public string[] ParseStoreElements(HtmlDocument document, IParserSettings settings)
+      public string[] ParseStoreElements(HtmlDocument document, ICrawlerSettings settings)
       {
          var priceList = new List<string>();
          var parentDivs = document
@@ -56,7 +56,7 @@ namespace HtmlParser.Core.ParserSettings
             {
                Category = document.DocumentNode.Descendants("h1").Where(_ => _.GetAttributeValue("itemprop", "").Equals("name")).FirstOrDefault().InnerText,
                Name = item.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-i-title clearfix")).FirstOrDefault().InnerText,
-               Image = item.Descendants("img").FirstOrDefault().ChildAttributes("src").FirstOrDefault().Value,
+               ImageLink = item.Descendants("img").FirstOrDefault().ChildAttributes("src").FirstOrDefault().Value,
                //Price = item.Descendants("div").Where(_ => _.GetAttributeValue("id", "").Equals("goods_price_block_2323992")).FirstOrDefault().InnerText
                //Scripts = 
             };

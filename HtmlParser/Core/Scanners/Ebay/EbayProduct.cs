@@ -12,6 +12,6 @@ namespace HtmlParser.Core.ParserSettings
       public string Category { get; set; }
       public string Name { get; set; }
       public string Price { get; set; }
-      public string Image { get; set; }
+      public string ImageLink { get; set; }
    }
 }

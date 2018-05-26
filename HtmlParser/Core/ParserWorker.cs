@@ -1,23 +1,21 @@
 ﻿
 namespace HtmlParser.Core
 {
+   using DataAccess;
    using HtmlAgilityPack;
    using System;
 
    public class ParserWorker<T> where T : class
    {
-      private IStoreParser<T> parser;
-
-      private IParserSettings parserSettings;
-
+      private ICrawler<T> parser;
+      private ICrawlerSettings parserSettings;
       private HtmlLoader loader;
-
+      private CrawlerDataProvider crawlerDataProvider;
       private bool isActive;
-
 
       public event Action<object, T> OneNewData;
       public event Action<object> OneCompleted;
-      public IStoreParser<T> Parser
+      public ICrawler<T> Parser
       {
          get
          {
@@ -30,7 +28,7 @@ namespace HtmlParser.Core
          }
       }
 
-      public IParserSettings Settings
+      public ICrawlerSettings Settings
       {
          get
          {
@@ -52,14 +50,14 @@ namespace HtmlParser.Core
          }
       }
 
-
-      public ParserWorker(IStoreParser<T> parser)
+      
+      public ParserWorker(ICrawler<T> parser)
       {
          this.parser = parser;
 
       }
 
-      public ParserWorker(IStoreParser<T> parser, IParserSettings parserSettings) : this(parser)
+      public ParserWorker(ICrawler<T> parser, ICrawlerSettings parserSettings) : this(parser)
       {
          this.parserSettings = parserSettings;
       }
@@ -76,7 +74,7 @@ namespace HtmlParser.Core
       }
 
 
-      private async void Worker(IParserSettings settings)
+      private async void Worker(ICrawlerSettings settings)
       {
          if (!isActive)
          {
@@ -86,7 +84,7 @@ namespace HtmlParser.Core
 
          var domParser = new HtmlWeb();
 
-         var document = domParser.Load(settings.BaseUrl);
+         var document = domParser.Load(settings.CategoriesPageUrl);
 
          var result = Parser.ParseStoreElements(document,settings);
 

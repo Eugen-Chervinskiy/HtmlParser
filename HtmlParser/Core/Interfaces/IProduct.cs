@@ -8,9 +8,10 @@ namespace HtmlParser.Core.Interfaces
 {
    public interface IProduct
    {
-       string Category { get; set; }
-       string Name { get; set; }
-       string Price { get; set; }
-       string Image { get; set; }
+      string Category { get; set; }
+      string Name { get; set; }
+      string Price { get; set; }
+      string ProductLink { get; set; }
+      string ImageLink { get; set; }
    }
 }

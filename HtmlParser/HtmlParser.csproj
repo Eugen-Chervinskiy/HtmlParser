@@ -54,14 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Interfaces\ICrawlerDataProvider.cs" />
     <Compile Include="Core\Interfaces\IProduct.cs" />
-    <Compile Include="Core\ParserSettings\EbayProduct.cs" />
-    <Compile Include="Core\ParserSettings\Product.cs" />
+    <Compile Include="Core\Scanners\Ebay\EbayProduct.cs" />
+    <Compile Include="Core\Scanners\Rozetka\RozetkaProduct.cs" />
     <Compile Include="Core\ParserSettings\WebParser.cs" />
     <Compile Include="Core\ParserSettings\ParserSetings.cs" />
     <Compile Include="Core\HtmlLoader.cs" />
-    <Compile Include="Core\IParser.cs" />
-    <Compile Include="Core\IParserSettings.cs" />
+    <Compile Include="Core\Interfaces\ICrawler.cs" />
+    <Compile Include="Core\Interfaces\ICrawlerSettings.cs" />
     <Compile Include="Core\ParserWorker.cs" />
     <Compile Include="Core\Scanners\Ebay\EbayCrawler.cs" />
     <Compile Include="Core\Scanners\Ebay\EbaySettings.cs" />
@@ -101,6 +102,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{4269a3d5-aa6a-4971-a576-04e6c9d8934d}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
