@@ -11,6 +11,12 @@ namespace HtmlParser.Core.ParserSettings
    public class WebParser : ICrawler<string[]>
    {
       private HtmlDocument _document;
+
+      public IEnumerable<string> ParseCategoriesAsync()
+      {
+         throw new System.NotImplementedException();
+      }
+
       //public WebParser(HtmlDocument document)
       //{
       //   _document = document;

@@ -13,5 +13,6 @@ namespace HtmlParser.Core.ParserSettings
       public string Name { get; set; }
       public string Price { get; set; }
       public string ImageLink { get; set; }
+      public string ProductLink { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
    }
 }

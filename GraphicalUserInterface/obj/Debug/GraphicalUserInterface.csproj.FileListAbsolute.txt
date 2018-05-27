@@ -15,3 +15,6 @@ D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterfa
 D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.csproj.CoreCompileInputs.cache
 D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.exe
 D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.pdb
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\obj\Debug\GraphicalUserInterface.MainForm.resources
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\DataAccess.dll
+D:\SSA Group cv\HtmlParser\GraphicalUserInterface\bin\Debug\DataAccess.pdb

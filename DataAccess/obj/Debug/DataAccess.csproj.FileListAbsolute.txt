@@ -1,0 +1,6 @@
+D:\SSA Group cv\HtmlParser\DataAccess\bin\Debug\DataAccess.dll
+D:\SSA Group cv\HtmlParser\DataAccess\bin\Debug\DataAccess.pdb
+D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
+D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
