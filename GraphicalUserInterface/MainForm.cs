@@ -18,13 +18,16 @@ namespace GraphicalUserInterface
       public MainForm()
       {
          InitializeComponent();
-
+         main1.BringToFront();
          
+
+
+
       }
 
       private void MainForm_Load(object sender, EventArgs e)
       {
-
+         
       }
 
       private void Parser_OneCompleted(object obj)
@@ -34,12 +37,28 @@ namespace GraphicalUserInterface
 
       private void button1_Click(object sender, EventArgs e)
       {
-         var scanner = new RozetkaCrawler();
-         var settings = new RozetkaSettings();
-         var crawler = new ParserWorker<List<RozetkaProduct>>(scanner, settings);
-         crawler.OneCompleted += Parser_OneCompleted;
+         main1.BringToFront();
+         //var scanner = new RozetkaCrawler();
+         //var settings = new RozetkaSettings();
+         //var crawler = new ParserWorker<List<RozetkaProduct>>(scanner, settings);
+         //crawler.OneCompleted += Parser_OneCompleted;
+         //crawler.Start();
+      }
 
-         crawler.Start();
+      private void button2_Click(object sender, EventArgs e)
+      {
+         step21.BringToFront();
+      }
+
+      private void button3_Click(object sender, EventArgs e)
+      {
+         step31.BringToFront();
+         
+      }
+
+      private void button4_Click(object sender, EventArgs e)
+      {
+         step41.BringToFront();
       }
    }
 }

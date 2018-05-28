@@ -10,3 +10,8 @@ E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.c
 E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
 E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
 E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\bin\Debug\DataAccess.dll
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\bin\Debug\DataAccess.pdb
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
