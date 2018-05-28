@@ -3,7 +3,9 @@ namespace HtmlParser.Core
 {
    using DataAccess;
    using HtmlAgilityPack;
+   using HtmlParser.Core.ParserSettings;
    using System;
+   using System.Collections.Generic;
 
    public class ParserWorker<T> where T : class
    {
@@ -15,7 +17,7 @@ namespace HtmlParser.Core
 
       public event Action<object, T> OneNewData;
       public event Action<object> OneCompleted;
-      public ICrawler<T> Parser
+      public ICrawler<T> Crawler
       {
          get
          {
@@ -54,12 +56,14 @@ namespace HtmlParser.Core
       public ParserWorker(ICrawler<T> parser)
       {
          this.parser = parser;
-
+         crawlerDataProvider = new CrawlerDataProvider();
       }
 
       public ParserWorker(ICrawler<T> parser, ICrawlerSettings parserSettings) : this(parser)
       {
          this.parserSettings = parserSettings;
+         crawlerDataProvider = new CrawlerDataProvider();
+         loader = new HtmlLoader(parserSettings);
       }
 
       public void Start()
@@ -76,19 +80,29 @@ namespace HtmlParser.Core
 
       private async void Worker(ICrawlerSettings settings)
       {
-         if (!isActive)
+         var categories = crawlerDataProvider.GetCategories(settings.FileResultPath);
+
+         foreach (var category in categories)
          {
-            OneCompleted?.Invoke(this);
-            return;
+            if (!isActive)
+            {
+               OneCompleted?.Invoke(this);
+               return;
+            }
+
+            var domParser = new HtmlWeb();
+            var document = new HtmlDocument();
+            
+            var page = await loader.GetSourceByPageId(category);
+            
+            document.LoadHtml(page);
+           
+            var result = Crawler.ParseStoreElements(document, settings);
+            
+            OneNewData?.Invoke(this, result);
+            
+           
          }
-
-         var domParser = new HtmlWeb();
-
-         var document = domParser.Load(settings.CategoriesPageUrl);
-
-         var result = Parser.ParseStoreElements(document,settings);
-
-         OneNewData?.Invoke(this, result);
          OneCompleted?.Invoke(this);
          isActive = false;
       }

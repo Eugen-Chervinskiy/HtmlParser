@@ -16,9 +16,10 @@ namespace HtmlParser.Core
       }
 
 
-      public async Task<string> GetSourceByPageId()
+      public async Task<string> GetSourceByPageId(string url)
       {
          var currentUrl = url;
+         
          var response = await client.GetAsync(currentUrl);
 
          string source = null;

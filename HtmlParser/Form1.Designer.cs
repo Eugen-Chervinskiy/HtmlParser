@@ -63,18 +63,19 @@
          this.ListTitles.Name = "ListTitles";
          this.ListTitles.Size = new System.Drawing.Size(643, 401);
          this.ListTitles.TabIndex = 0;
+         this.ListTitles.SelectedIndexChanged += new System.EventHandler(this.ListTitles_SelectedIndexChanged);
          // 
          // materialLabel1
          // 
          this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
          this.materialLabel1.AutoSize = true;
          this.materialLabel1.Depth = 0;
-         this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+         this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
          this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
          this.materialLabel1.Location = new System.Drawing.Point(747, 23);
          this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
          this.materialLabel1.Name = "materialLabel1";
-         this.materialLabel1.Size = new System.Drawing.Size(77, 18);
+         this.materialLabel1.Size = new System.Drawing.Size(75, 19);
          this.materialLabel1.TabIndex = 9;
          this.materialLabel1.Text = "Enter URL";
          // 
@@ -83,12 +84,12 @@
          this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
          this.materialLabel2.AutoSize = true;
          this.materialLabel2.Depth = 0;
-         this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+         this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
          this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
          this.materialLabel2.Location = new System.Drawing.Point(747, 123);
          this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
          this.materialLabel2.Name = "materialLabel2";
-         this.materialLabel2.Size = new System.Drawing.Size(72, 18);
+         this.materialLabel2.Size = new System.Drawing.Size(73, 19);
          this.materialLabel2.TabIndex = 10;
          this.materialLabel2.Text = "Enter Tag";
          // 

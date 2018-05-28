@@ -4,3 +4,9 @@ D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.csprojResolveAssembly
 D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
 D:\SSA Group cv\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
+E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\bin\Debug\DataAccess.dll
+E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\bin\Debug\DataAccess.pdb
+E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
+E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
+E:\Crawler Graduate Work\WebCrawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

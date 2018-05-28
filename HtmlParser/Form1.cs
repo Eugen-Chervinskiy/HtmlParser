@@ -82,5 +82,10 @@ namespace HtmlParser
       {
 
       }
+
+      private void ListTitles_SelectedIndexChanged(object sender, EventArgs e)
+      {
+
+      }
    }
 }
