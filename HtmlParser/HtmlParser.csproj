@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Core\Interfaces\ICrawlerDataProvider.cs" />
     <Compile Include="Core\Interfaces\IProduct.cs" />
+    <Compile Include="Core\Scanners\Ebay\EbayHelper.cs" />
     <Compile Include="Core\Scanners\Ebay\EbayProduct.cs" />
     <Compile Include="Core\Scanners\Rozetka\RozetkaProduct.cs" />
     <Compile Include="Core\ParserSettings\WebParser.cs" />

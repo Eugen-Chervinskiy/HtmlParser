@@ -16,7 +16,7 @@ namespace DataAccess
             throw new FileNotFoundException("File not found!");
          }
 
-         IEnumerable<string> categories = File.ReadLines(path);
+         IEnumerable<string> categories = File.ReadAllLines(path);
          return categories;
       }
    }

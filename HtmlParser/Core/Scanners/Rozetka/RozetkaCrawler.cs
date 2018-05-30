@@ -38,9 +38,6 @@ namespace HtmlParser.Core.Scanners.Rozetka
 
          var configJson = scriptPrice.Replace("dataLayer.push(","").Replace(");","");
 
-         var prod = new RozetkaProduct();
-
-         var price = document.DocumentNode.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-l g-i-tile-catalog-hover-left-side clearfix")).ToList();
          JObject jObject = JObject.Parse(configJson);
          JToken jproduct = jObject["products"];
          
