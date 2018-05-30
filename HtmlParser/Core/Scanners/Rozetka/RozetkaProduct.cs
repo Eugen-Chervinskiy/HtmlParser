@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using HtmlParser.Core.Interfaces;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,14 @@ namespace HtmlParser.Core.ParserSettings
 {
    public class RozetkaProduct : IProduct
    {
+      public RozetkaProduct(string json)
+      {
+         JObject jObject = JObject.Parse(json);
+         JToken jproduct = jObject["products"];
+
+         Price = (double)jproduct["productPrice"];
+      }
+
       public RozetkaProduct()
       {
 
@@ -17,7 +26,7 @@ namespace HtmlParser.Core.ParserSettings
       //public IEnumerable<HtmlNode> Scripts;
       public string Category { get; set; }
       public string Name { get; set;}
-      public string Price { get; set; }
+      public double Price { get; set; }
       public string ImageLink { get; set; }
       public string ProductLink { get; set; }
 

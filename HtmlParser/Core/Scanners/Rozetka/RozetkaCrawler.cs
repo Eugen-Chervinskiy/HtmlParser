@@ -8,6 +8,8 @@ using DataAccess;
 using HtmlAgilityPack;
 using HtmlParser.Core.Interfaces;
 using HtmlParser.Core.ParserSettings;
+using System.Web.UI;
+
 
 namespace HtmlParser.Core.Scanners.Rozetka
 {
@@ -19,45 +21,7 @@ namespace HtmlParser.Core.Scanners.Rozetka
       {
          throw new NotImplementedException();
       }
-
-      //public async Task<IEnumerable<string>> ParseCategoriesAsync()
-      //{
-      //   var resut = new List<string>();
-
-      //   var httpClient = new HttpClient();
-
-      //   var html = await httpClient.GetStringAsync();
-
-      //   var htmlDocument = new HtmlDocument();
-      //   htmlDocument.LoadHtml(html);
-
-
-
-      //   //var categories = htmlDocument
-      //   //   .DocumentNode
-      //   //   .Descendants("a")
-
-      //   //   .Where(node => node.GetAttributeValue("class", "").Equals("categories-with-links"))
-      //   //   .ToList();
-
-
-      //   var categories = htmlDocument
-      //      .DocumentNode
-      //      .Descendants("ul")
-
-      //      .Where(node => node.GetAttributeValue("class", "").Equals("sub-categories-list"))
-      //      .ToList();
-
-      //   foreach (var item in categories)
-      //   {
-      //      Console.WriteLine(item.InnerText);
-      //      //Console.WriteLine(item.InnerHtml);
-      //      Console.WriteLine(item.GetAttributeValue("href", ""));
-      //      resut.Add(item.GetAttributeValue("href", ""));
-      //      File.AppendAllText("text.txt", item.InnerHtml + "\n");
-
-      //   }
-      //}
+   
 
       public string ParseProductCategory()
       {
@@ -83,6 +47,12 @@ namespace HtmlParser.Core.Scanners.Rozetka
                         .Where(_ => _.GetAttributeValue("class", "")
                         .Equals("g-i-tile g-i-tile-catalog"))
                         .ToList();
+
+         var scriptPrice = document.DocumentNode.Descendants("script").Skip(3).Take(1).FirstOrDefault().InnerText;
+
+         var configJson = scriptPrice.Replace("dataLayer.push(","").Replace(");","");
+
+         var prod = new RozetkaProduct(configJson);
 
          var price = document.DocumentNode.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-l g-i-tile-catalog-hover-left-side clearfix")).ToList();
 

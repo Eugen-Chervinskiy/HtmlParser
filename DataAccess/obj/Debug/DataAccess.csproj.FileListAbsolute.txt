@@ -15,3 +15,11 @@ D:\SSA Group cv\Crawler\HtmlParser\DataAccess\bin\Debug\DataAccess.pdb
 D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
 D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\bin\Debug\DataAccess.dll
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\bin\Debug\DataAccess.pdb
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\bin\Debug\Newtonsoft.Json.dll
+E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\bin\Debug\Newtonsoft.Json.xml

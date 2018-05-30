@@ -10,7 +10,7 @@ namespace HtmlParser.Core.Interfaces
    {
       string Category { get; set; }
       string Name { get; set; }
-      string Price { get; set; }
+      double Price { get; set; }
       string ProductLink { get; set; }
       string ImageLink { get; set; }
    }

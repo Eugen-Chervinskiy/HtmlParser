@@ -38,11 +38,11 @@ namespace GraphicalUserInterface
       private void button1_Click(object sender, EventArgs e)
       {
          main1.BringToFront();
-         //var scanner = new RozetkaCrawler();
-         //var settings = new RozetkaSettings();
-         //var crawler = new ParserWorker<List<RozetkaProduct>>(scanner, settings);
-         //crawler.OneCompleted += Parser_OneCompleted;
-         //crawler.Start();
+         var scanner = new RozetkaCrawler();
+         var settings = new RozetkaSettings();
+         var crawler = new ParserWorker<List<RozetkaProduct>>(scanner, settings);
+         crawler.OneCompleted += Parser_OneCompleted;
+         crawler.Start();
       }
 
       private void button2_Click(object sender, EventArgs e)
