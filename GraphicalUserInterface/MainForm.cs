@@ -1,5 +1,6 @@
 ﻿using HtmlParser.Core;
 using HtmlParser.Core.ParserSettings;
+using HtmlParser.Core.Scanners.Ebay;
 using HtmlParser.Core.Scanners.Rozetka;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,11 @@ namespace GraphicalUserInterface
       private void button2_Click(object sender, EventArgs e)
       {
          step21.BringToFront();
+         var scanner = new EbayCrawler();
+         var settings = new EbaySettings();
+         var crawler = new ParserWorker<List<EbayProduct>>(scanner, settings);
+         crawler.OneCompleted += Parser_OneCompleted;
+         crawler.Start();
       }
 
       private void button3_Click(object sender, EventArgs e)

@@ -11,8 +11,11 @@ namespace HtmlParser.Core.ParserSettings
    {
       public string Category { get; set; }
       public string Name { get; set; }
-      public double Price { get; set; }
+      public string SubTitle { get; set; }
+      public string Price { get; set; }
       public string ImageLink { get; set; }
-      public string ProductLink { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+      public string ProductLink { get; set; }
+
+
    }
 }

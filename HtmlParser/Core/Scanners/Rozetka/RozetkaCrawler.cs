@@ -9,12 +9,13 @@ using HtmlAgilityPack;
 using HtmlParser.Core.Interfaces;
 using HtmlParser.Core.ParserSettings;
 using System.Web.UI;
-
+using Newtonsoft.Json.Linq;
 
 namespace HtmlParser.Core.Scanners.Rozetka
 {
-   public class RozetkaCrawler : ICrawler<List<RozetkaProduct>>, ICrawlerDataProvider
+   public class RozetkaCrawler : ICrawler<List<RozetkaProduct>>
    {
+      private int productCount;
       public ICrawlerDataProvider dataProvider { get; set; }
 
       public IEnumerable<string> ParseCategoriesAsync()
@@ -22,24 +23,9 @@ namespace HtmlParser.Core.Scanners.Rozetka
          throw new NotImplementedException();
       }
    
-
-      public string ParseProductCategory()
-      {
-         throw new NotImplementedException();
-      }
-
-      public string ParseProductPrice()
-      {
-         throw new NotImplementedException();
-      }
-
-      public string ParseProductTitle()
-      {
-         throw new NotImplementedException();
-      }
-
       public List<RozetkaProduct> ParseStoreElements(HtmlDocument document, ICrawlerSettings settings)
       {
+         productCount = 0;
          var products = new List<RozetkaProduct>();
          var parentDivs = document
                         .DocumentNode
@@ -52,21 +38,30 @@ namespace HtmlParser.Core.Scanners.Rozetka
 
          var configJson = scriptPrice.Replace("dataLayer.push(","").Replace(");","");
 
-         var prod = new RozetkaProduct(configJson);
+         var prod = new RozetkaProduct();
 
          var price = document.DocumentNode.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-l g-i-tile-catalog-hover-left-side clearfix")).ToList();
-
+         JObject jObject = JObject.Parse(configJson);
+         JToken jproduct = jObject["products"];
+         
          foreach (var item in parentDivs)
          {
+
             var parsedProduct = new RozetkaProduct
             {
                Category = document.DocumentNode.Descendants("h1").Where(_ => _.GetAttributeValue("itemprop", "").Equals("name")).FirstOrDefault().InnerText,
                Name = item.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-i-title clearfix")).FirstOrDefault().InnerText,
                ImageLink = item.Descendants("img").FirstOrDefault().ChildAttributes("src").FirstOrDefault().Value,
-               //Price = item.Descendants("div").Where(_ => _.GetAttributeValue("id", "").Equals("goods_price_block_2323992")).FirstOrDefault().InnerText
-               //Scripts = 
+               ProductLink = item.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-i-title clearfix")).FirstOrDefault().Descendants("a").FirstOrDefault().GetAttributeValue("href",""),
+               Price = (string)jproduct[productCount]["productPrice"],
+               ProductID = (string)jproduct[productCount]["prodictID"],
+               Condition = (string)jproduct[productCount]["productCondition"],
+               VendorID = (string)jproduct[productCount]["productVendorID"],
+               SalesRank = (string)jproduct[productCount]["productPosition"]
             };
+
             products.Add(parsedProduct);
+            productCount++;
          }
          var serializator = new Serializator<List<RozetkaProduct>>();
          serializator.SerializeToXml(products);

@@ -10,8 +10,6 @@ namespace HtmlParser.Core
    {
       IEnumerable<string> ParseCategoriesAsync();
       T ParseStoreElements(HtmlDocument document, ICrawlerSettings settings);
-      string ParseProductTitle();
-      string ParseProductCategory();
-      string ParseProductPrice();
+     
    }
 }

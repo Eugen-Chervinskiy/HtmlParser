@@ -23,3 +23,6 @@ E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.dll
 E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.pdb
 E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\bin\Debug\Newtonsoft.Json.dll
 E:\Crawler Graduate Work\Crawler\HtmlParser\DataAccess\bin\Debug\Newtonsoft.Json.xml
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\bin\Debug\Newtonsoft.Json.dll
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\bin\Debug\Newtonsoft.Json.xml
+D:\SSA Group cv\Crawler\HtmlParser\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
