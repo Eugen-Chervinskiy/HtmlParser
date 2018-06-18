@@ -65,10 +65,10 @@
     <Compile Include="Core\Scanners\Rozetka\RozetkaProduct.cs" />
     <Compile Include="Core\ParserSettings\WebParser.cs" />
     <Compile Include="Core\ParserSettings\ParserSetings.cs" />
-    <Compile Include="Core\HtmlLoader.cs" />
+    <Compile Include="Core\PageDownloader.cs" />
     <Compile Include="Core\Interfaces\ICrawler.cs" />
     <Compile Include="Core\Interfaces\ICrawlerSettings.cs" />
-    <Compile Include="Core\ParserWorker.cs" />
+    <Compile Include="Core\CrawlingProcess.cs" />
     <Compile Include="Core\Scanners\Ebay\EbayCrawler.cs" />
     <Compile Include="Core\Scanners\Ebay\EbaySettings.cs" />
     <Compile Include="Core\Scanners\Rozetka\RozetkaCrawler.cs" />

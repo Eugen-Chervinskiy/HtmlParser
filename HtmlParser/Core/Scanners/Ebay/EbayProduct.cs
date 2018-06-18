@@ -11,10 +11,11 @@ namespace HtmlParser.Core.ParserSettings
    {
       public string Category { get; set; }
       public string Name { get; set; }
-      public string SubTitle { get { return SubTitle ?? "empty"; } set { } }
+      public string SubTitle { get; set; }
       public string Price { get; set; }
       public string ImageLink { get; set; }
       public string ProductLink { get; set; }
+      public string ProductSold { get; set; }
 
 
    }

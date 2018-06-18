@@ -5,11 +5,11 @@ namespace HtmlParser.Core
    using System.Net.Http;
    using System.Threading.Tasks;
 
-   public class HtmlLoader
+   public class PageDownloader
    {
       private readonly HttpClient client;
       private readonly string url;
-      public HtmlLoader(ICrawlerSettings settings)
+      public PageDownloader(ICrawlerSettings settings)
       {
          client = new HttpClient();
          url = $"{settings.CategoriesPageUrl}";

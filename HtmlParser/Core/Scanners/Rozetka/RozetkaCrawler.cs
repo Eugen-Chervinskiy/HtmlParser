@@ -15,16 +15,59 @@ namespace HtmlParser.Core.Scanners.Rozetka
 {
    public class RozetkaCrawler : ICrawler<List<RozetkaProduct>>
    {
+      
       private int productCount;
-      public ICrawlerDataProvider dataProvider { get; set; }
+      public ICrawlerDataProvider DataProvider { get; set; }
 
-      public IEnumerable<string> ParseCategoriesAsync()
+      public bool CanScanPage()
       {
          throw new NotImplementedException();
       }
-   
+
+      public async Task<IEnumerable<string>> ParseCategoriesAsync(ICrawlerSettings settings)
+      {
+         var resut = new List<string>();
+
+         var httpClient = new HttpClient();
+
+         var html = await httpClient.GetStringAsync(settings.CategoriesPageUrl);
+
+         var htmlDocument = new HtmlDocument();
+         htmlDocument.LoadHtml(html);
+
+
+         var categories = htmlDocument
+            .DocumentNode
+            .Descendants("a")
+
+            .Where(node => node.GetAttributeValue("class", "").Equals("all-cat-b-l-i-link-child novisited"))
+            .ToList();
+
+
+         //var categories = htmlDocument
+         //   .DocumentNode
+         //   .Descendants("ul")
+
+         //   .Where(node => node.GetAttributeValue("class", "").Equals("sub-categories-list"))
+         //   .ToList();
+
+         using (var writer = new StreamWriter("textTTTT.txt"))
+         {
+            foreach (var item in categories)
+            {
+               //File.AppendAllText($"textTTTT.txt", item.GetAttributeValue("href", "") + $"\n\r");
+               await writer.WriteLineAsync(item.GetAttributeValue("href", ""));
+            }
+         }
+         
+
+         return resut.ToList();
+      }
+
       public List<RozetkaProduct> ParseStoreElements(HtmlDocument document, ICrawlerSettings settings)
       {
+         RozetkaProduct parsedProduct = null;
+         var serializator = new Serializator<List<RozetkaProduct>>();
          productCount = 0;
          var products = new List<RozetkaProduct>();
          var parentDivs = document
@@ -44,7 +87,7 @@ namespace HtmlParser.Core.Scanners.Rozetka
          foreach (var item in parentDivs)
          {
 
-            var parsedProduct = new RozetkaProduct
+            parsedProduct = new RozetkaProduct
             {
                Category = document.DocumentNode.Descendants("h1").Where(_ => _.GetAttributeValue("itemprop", "").Equals("name")).FirstOrDefault().InnerText,
                Name = item.Descendants("div").Where(_ => _.GetAttributeValue("class", "").Equals("g-i-tile-i-title clearfix")).FirstOrDefault().InnerText,
@@ -60,14 +103,12 @@ namespace HtmlParser.Core.Scanners.Rozetka
             products.Add(parsedProduct);
             productCount++;
          }
-         var serializator = new Serializator<List<RozetkaProduct>>();
-         serializator.SerializeToXml(products);
+         
+         //serializator.SerializeToXml(products,parsedProduct.Category);
+         serializator.SerializeToJson(products, parsedProduct.Category);
          return products;
       }
 
-      public void UpdateCrawlerData(ICrawlerSettings settings)
-      {
-         throw new NotImplementedException();
-      }
+      
    }
 }

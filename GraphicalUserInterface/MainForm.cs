@@ -41,7 +41,7 @@ namespace GraphicalUserInterface
          main1.BringToFront();
          var scanner = new RozetkaCrawler();
          var settings = new RozetkaSettings();
-         var crawler = new ParserWorker<List<RozetkaProduct>>(scanner, settings);
+         var crawler = new CrawlingProccess<List<RozetkaProduct>>(scanner, settings);
          crawler.OneCompleted += Parser_OneCompleted;
          crawler.Start();
       }
@@ -51,7 +51,7 @@ namespace GraphicalUserInterface
          step21.BringToFront();
          var scanner = new EbayCrawler();
          var settings = new EbaySettings();
-         var crawler = new ParserWorker<List<EbayProduct>>(scanner, settings);
+         var crawler = new CrawlingProccess<List<EbayProduct>>(scanner, settings);
          crawler.OneCompleted += Parser_OneCompleted;
          crawler.Start();
       }

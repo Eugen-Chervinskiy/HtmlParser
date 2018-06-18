@@ -12,7 +12,7 @@ namespace HtmlParser
 
    public partial class Form1 : MaterialForm
    {
-      ParserWorker<string[]> parser;
+      CrawlingProccess<string[]> parser;
 
       public Form1()
       {
@@ -27,7 +27,7 @@ namespace HtmlParser
          //                                  Accent.LightBlue200,
          //                                  TextShade.WHITE);
 
-         parser = new ParserWorker<string[]>(new WebParser());
+         //parser = new CrawlingProccess<string[]>(new WebParser());
 
          parser.OneCompleted += Parser_OneCompleted;
          parser.OneNewData += Parser_OneNewData;

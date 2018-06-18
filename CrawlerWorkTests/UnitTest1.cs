@@ -30,7 +30,7 @@ namespace CrawlerWorkTests
       {
          var scanner = new RozetkaCrawler();
          var settings = new RozetkaSettings();
-         var crawler = new ParserWorker<List<RozetkaProduct>>(scanner,settings);
+         var crawler = new CrawlingProccess<List<RozetkaProduct>>(scanner,settings);
 
          crawler.Start();
       }

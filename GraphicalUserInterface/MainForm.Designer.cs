@@ -121,7 +121,7 @@
          // 
          this.bunifuDragControl1.Fixed = true;
          this.bunifuDragControl1.Horizontal = true;
-         this.bunifuDragControl1.TargetControl = this.panel2;
+         this.bunifuDragControl1.TargetControl = this.panel1;
          this.bunifuDragControl1.Vertical = true;
          // 
          // main1

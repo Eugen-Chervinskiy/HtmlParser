@@ -7,8 +7,9 @@ namespace HtmlParser.Core.ParserSettings
    using System.Linq;
    using HtmlAgilityPack;
    using System.Net.Http;
+   using System.Threading.Tasks;
 
-   public class WebParser : ICrawler<string[]>
+   public class WebParser /*: ICrawler<string[]>*/
    {
       private HtmlDocument _document;
 
@@ -72,6 +73,9 @@ namespace HtmlParser.Core.ParserSettings
          return priceList.ToArray();
       }
 
-      
+      //Task<IEnumerable<string>> ICrawler<string[]>.ParseCategoriesAsync()
+      //{
+      //   throw new System.NotImplementedException();
+      //}
    }
 }

@@ -7,11 +7,12 @@ namespace HtmlParser.Core
    using System;
    using System.Collections.Generic;
 
-   public class ParserWorker<T> where T : class
+
+   public class CrawlingProccess<T> where T : class
    {
       private ICrawler<T> parser;
       private ICrawlerSettings parserSettings;
-      private HtmlLoader loader;
+      private PageDownloader loader;
       private CrawlerDataProvider crawlerDataProvider;
       private bool isActive;
 
@@ -40,7 +41,7 @@ namespace HtmlParser.Core
          set
          {
             parserSettings = value;
-            loader = new HtmlLoader(value);
+            loader = new PageDownloader(value);
          }
       }
 
@@ -53,17 +54,17 @@ namespace HtmlParser.Core
       }
 
       
-      public ParserWorker(ICrawler<T> parser)
+      public CrawlingProccess(ICrawler<T> parser)
       {
          this.parser = parser;
          crawlerDataProvider = new CrawlerDataProvider();
       }
 
-      public ParserWorker(ICrawler<T> parser, ICrawlerSettings parserSettings) : this(parser)
+      public CrawlingProccess(ICrawler<T> parser, ICrawlerSettings parserSettings) : this(parser)
       {
          this.parserSettings = parserSettings;
          crawlerDataProvider = new CrawlerDataProvider();
-         loader = new HtmlLoader(parserSettings);
+         loader = new PageDownloader(parserSettings);
       }
 
       public void Start()
@@ -80,6 +81,7 @@ namespace HtmlParser.Core
 
       private async void Worker(ICrawlerSettings settings)
       {
+         await Crawler.ParseCategoriesAsync(settings);
          var categories = crawlerDataProvider.GetCategories(settings.FileResultPath);
 
          foreach (var category in categories)
